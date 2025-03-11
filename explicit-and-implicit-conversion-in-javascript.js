@@ -40,5 +40,5 @@ if (redDucks) {
   console.log("Ducks aren't red!"); // Example of explicit conversion, converting 0 to false. Also edge case because I used null.
 }
 
-let myAge = "My age is " + 35;
+let myAge = "My age is " + 35; // Example of implicit conversion, STRING CONCATENATION WITH THE  +  OPERATOR.
 console.log(myAge);
