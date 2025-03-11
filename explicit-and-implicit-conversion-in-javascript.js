@@ -20,7 +20,7 @@ Use console.log() to clearly show the before-and-after type conversions.
 
 
 let result = "5" - 2;
-let numResult = Number(result)
+let numResult = Number(result);
 console.log("The result is: " + numResult); // While the original code did get the correct output due to implicit conversion, this gets it through excplicit conversion.
 
 let isValid = Boolean("false");
@@ -32,3 +32,13 @@ let age = "25";
 let numAge = Number(age);
 let totalAge = numAge + 5;
 console.log("Total Age: " + totalAge); // Strings and numbers are concatenated by the + operator. To fix, I converted the sting "age" into a number.
+
+let redDucks = Boolean(null);
+if (redDucks) {
+  console.log("Ducks are red!");
+} else {
+  console.log("Ducks aren't red!"); // Example of explicit conversion, converting 0 to false. Also edge case because I used null.
+}
+
+let myAge = "My age is " + 35;
+console.log(myAge);
