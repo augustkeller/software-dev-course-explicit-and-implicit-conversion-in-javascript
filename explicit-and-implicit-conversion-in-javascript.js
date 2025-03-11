@@ -20,13 +20,15 @@ Use console.log() to clearly show the before-and-after type conversions.
 
 
 let result = "5" - 2;
-console.log("The result is: " + result);
+let numResult = Number(result)
+console.log("The result is: " + numResult); // While the original code did get the correct output due to implicit conversion, this gets it through excplicit conversion.
 
 let isValid = Boolean("false");
 if (isValid) {
-    console.log("This is valid!");
+    console.log("This is valid!"); // This is correct. Any non-empty string is considered truthy, even the string "false".
 }
 
 let age = "25";
-let totalAge = age + 5;
-console.log("Total Age: " + totalAge);
+let numAge = Number(age);
+let totalAge = numAge + 5;
+console.log("Total Age: " + totalAge); // Strings and numbers are concatenated by the + operator. To fix, I converted the sting "age" into a number.
